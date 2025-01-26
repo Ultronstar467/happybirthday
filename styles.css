@@ -1,0 +1,150 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #FF8C00, #FF1493, #8A2BE2, #32CD32);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling */
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Title styling */
+.title {
+    font-size: 2.5rem;
+    color: #FF1493;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    background: -webkit-linear-gradient(45deg, #FF8C00, #FF1493);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Message styling */
+.message {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Button styling */
+.celebrate-button {
+    background-color: #FF8C00;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.celebrate-button:hover {
+    background-color: #FF1493;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Close button */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Photo container styling */
+.photo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.birthday-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Ensure the image stays big */
+    object-fit: cover; /* Ensure the image is not distorted */
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeInImage 2s ease-in forwards;
+}
+
+/* Animated Happy Birthday text */
+.message-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.animated-message {
+    font-size: 4rem; /* Increased font size */
+    color: #FF1493;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInText 2s ease-in forwards;
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fade-in animation for image */
+@keyframes fadeInImage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fade-in animation for message */
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
